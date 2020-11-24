@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color:rgb(126, 123, 123);
+  --bgColor: rgb(212, 233, 250);
+  --min:100vh;
+  --shade:rgba(129, 128, 128, 0.233);
+  --col3: rgb(112, 111, 111);
+}
+body {
+  overflow: hidden;
+}
+
+/*header section */
+header {
+  background-color: var(--bgColor);
+  font-weight: 100;
+  color: var(--color);
+
+}
+
+header div {
+  padding: 1em 2em;
+ display: flex;
+ justify-content: space-between;
+}
+
+header div .links ul {
+  list-style-type: none;
+  display: flex;
+  
+}
+header div .links ul li {
+  color: var(--color);
+  font-weight: 500;
+  margin-left: 2.5em;
+  cursor: pointer;
+}
+
+/*hover */
+header div .links ul li:hover{
+  color: white;
+  font-weight: bold;
+}
+/*hide the h4 on large screen */
+header div .links h4 {
+  display: none;
+}
+
+
+.App-header {
+min-height: var(--min);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ 
+}
+
+.drag {
+  margin-left: 5em;
+  color:var(--shade) ;
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+.disc {
+  color: var(--col3);
+}
+
+.form-control:{
+  color: red;
+  border: none;
+  
+}
+
+/* phone screen */
+@media screen and (max-width:600px){
+  header{
+    position: sticky;
+  }
+  header div .links ul {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: absolute;
+    margin-top: 2em;
+    right: 5%;
+    display: none;
+  } /*hover */
+
+  header div .links ul li:hover{
+    color: rgba(66, 65, 65, 0.212);
+    font-weight: bold;
+  }
+  /*show the h4*/
+  header div .links h4 {
+    display: inline;
+  }
+
+ 
+
+}
