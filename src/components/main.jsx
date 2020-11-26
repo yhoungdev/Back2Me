@@ -23,7 +23,7 @@ import React,{useState} from 'react'
              <h6 className='disc'>{name}</h6>
              <h6 className='disc'>{type}</h6>
 
-             {name==''? <h6 className='drag'>Drag item here to upload</h6> : <button className='btn btn-info'>upload</button>}
+             {name==''? <h6 className='drag'>Drag item here to upload</h6> : <button className='btn btn-info' onClick={()=>alert('still under developement needs data to use push notification instead of Alert')}>upload</button>}
                     </form>
                 </div>
                
